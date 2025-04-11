@@ -1,6 +1,6 @@
 name: vguard
 description: A simple and fluent way to validate form or input data in Dart and Flutter.
-version: 1.0.0
+version: 1.0.1
 
 homepage: https://github.com/devv-thiago/vguard
 repository: https://github.com/devv-thiago/vguard
