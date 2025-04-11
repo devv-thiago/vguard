@@ -1,39 +1,115 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# VGuard
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+**VGuard** is a lightweight and fluent validation library for Dart and Flutter, designed to simplify input validations through a chainable API.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
+## 🚀 Getting Started
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### a) Adding the package to your `pubspec.yaml`
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  vguard: ^1.0.0
 ```
 
-## Additional information
+### b) Or add via Dart CLI:
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```bash
+dart pub add vguard
+```
+
+Once added, import the package in your Dart or Flutter file:
+
+```dart
+import 'package:vguard/vguard.dart';
+```
+
+
+
+## 🧪 How To Use
+
+### Basic Example
+
+```dart
+final result = ValidationChain("email@example.com")
+  .isRequired()
+  .isEmail()
+  .run();
+
+if (!result.isValid) {
+  print(result.errors);
+}
+```
+
+### Password Validation
+
+```dart
+final result = ValidationChain("MyStrong@Pass123")
+  .isSecurePassword(highSecurityValidation: true)
+  .run();
+
+if (!result.isValid) {
+  print(result.errors);
+}
+```
+
+
+
+## 🔧 Available Validators
+
+You can build custom validation chains with any of the following validators:
+
+| Validator              | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| `isRequired()`         | Ensures the value is not null or empty                                      |
+| `isEmail()`            | Validates if the value is a properly formatted email                        |
+| `isMinimumLength(n)`   | Validates that the value has at least `n` characters                        |
+| `isMaximumLength(n)`   | Validates that the value has at most `n` characters                         |
+| `isSecurePassword()`   | Validates password strength (standard or strict mode based on your needs)   |
+
+
+## 💡 Validation Result
+
+The result of the validation is an instance of `ValidationResult`, which includes:
+
+```dart
+bool isValid;
+List<String> errors;
+```
+
+Use `isValid` to check the result and `errors` to get the list of failed messages.
+
+
+
+## 📂 Example
+
+You can find more examples in the [`example`](example) folder.
+
+
+
+
+## 🧩 Contributing
+
+Contributions are welcome and appreciated!
+
+If you have ideas, bugs to report, or features to suggest:
+
+- Open an issue with an appropriate label.
+- Follow Conventional Commits and Semantic Versioning for PRs.
+- Don't forget to star the project!
+
+---
+
+## 📬 Contact
+
+**Maintainer:** devv-thiago
+
+- GitHub: [https://github.com/devv-thiago](https://github.com/your-profile)
+
+
+
+## 🙌 Acknowledgements
+
+Inspired by clean, expressive, and maintainable validation APIs.
+
