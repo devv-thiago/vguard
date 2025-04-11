@@ -22,7 +22,7 @@ dart pub add vguard
 Once added, import the package in your Dart or Flutter file:
 
 ```dart
-import 'package:vguard/vguard.dart';
+import 'package:vguard/src/utils/extensions.dart';
 ```
 
 
