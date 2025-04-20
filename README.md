@@ -87,8 +87,6 @@ Use `isValid` to check the result and `errors` to get the list of failed message
 You can find more examples in the [`example`](example) folder.
 
 
-
-
 ## 🧩 Contributing
 
 Contributions are welcome and appreciated!
@@ -105,7 +103,7 @@ If you have ideas, bugs to report, or features to suggest:
 
 **Maintainer:** devv-thiago
 
-- GitHub: [https://github.com/devv-thiago](https://github.com/your-profile)
+- GitHub: [https://github.com/devv-thiago](https://github.com/devv-thiago)
 
 
 

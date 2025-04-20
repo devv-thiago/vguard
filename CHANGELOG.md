@@ -9,3 +9,7 @@
 ## 1.0.2
 
 - Improving install doc.
+
+## 1.0.3
+
+- Fixing Github profile link.
