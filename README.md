@@ -85,7 +85,7 @@ Use `isValid` to check the result and `errors` to get the list of failed message
 ## 📂 Example
 
 You can find more examples in the [`example`](example) folder.
-
+y
 
 ## 🧩 Contributing
 
